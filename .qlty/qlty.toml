@@ -39,6 +39,8 @@ exclude_patterns = [
   "**/testdata/**",
   "**/vendor/**",
   "**/assets/**",
+  "src/app/(payload)/**",
+  "payload-types.ts",
 ]
 
 test_patterns = [

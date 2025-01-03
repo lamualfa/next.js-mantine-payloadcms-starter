@@ -8,7 +8,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "ignore": ["src/app/(payload)", "payload.config.ts", "payload-types.ts"]
+    "ignore": ["src/app/(payload)", "payload-types.ts"]
   },
   "formatter": {
     "enabled": true,
