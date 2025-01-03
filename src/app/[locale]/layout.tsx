@@ -5,6 +5,7 @@ import { Inter } from "next/font/google"
 import type { PropsWithChildren } from "react"
 
 import { isDevelopment } from "@/libs/config"
+import type { PageWithLocaleParamsProps } from "@/libs/locale/server"
 import { theme } from "@/libs/theme"
 import { ColorSchemeScript, MantineProvider } from "@mantine/core"
 import clsx from "clsx"
@@ -19,11 +20,15 @@ const interFont = Inter({
   variable: "--font-inter",
 })
 
-type RootLayoutProps = PropsWithChildren
+interface RootLayoutProps
+  extends PropsWithChildren,
+    PageWithLocaleParamsProps {}
 
-export default function RootLayout(props: RootLayoutProps) {
+export default async function RootLayout(props: RootLayoutProps) {
+  const { locale } = await props.params
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <ColorSchemeScript />
       </head>
