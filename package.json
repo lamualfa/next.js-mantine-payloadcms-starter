@@ -7,15 +7,25 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload"
   },
   "dependencies": {
     "@mantine/core": "^7.15.2",
     "@mantine/hooks": "^7.15.2",
+    "@payloadcms/db-postgres": "^3.13.0",
+    "@payloadcms/next": "^3.13.0",
+    "@payloadcms/richtext-lexical": "^3.13.0",
     "clsx": "^2.1.1",
+    "graphql": "^16.10.0",
     "next": "canary",
+    "payload": "^3.13.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "server-only": "^0.0.1",
+    "sharp": "^0.33.5",
+    "valibot": "1.0.0-beta.9",
+    "valibot-env": "^0.2.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -25,6 +35,8 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
     "lefthook": "^1.9.0",
     "postcss": "^8.4.49",
     "postcss-preset-mantine": "^1.17.0",
@@ -32,9 +44,7 @@
     "tailwind-scrollbar": "^3.1.0",
     "tailwindcss": "^3.4.1",
     "tailwindcss-debug-screens": "^2.2.1",
-    "typescript": "^5",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "typescript": "^5"
   },
   "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
 }
