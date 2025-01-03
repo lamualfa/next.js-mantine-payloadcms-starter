@@ -6,6 +6,7 @@ I'm tired of making the same Next.js project over and over again. So this is the
 
 - React v19
 - Next.js v15
+- Payload CMS v3
 - Mantine v7
 - Tailwind CSS v3
 - Biome v1.9.4

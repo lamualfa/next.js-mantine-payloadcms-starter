@@ -20,6 +20,9 @@ importers:
       '@payloadcms/db-postgres':
         specifier: ^3.13.0
         version: 3.13.0(@types/react@19.0.0)(payload@3.13.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.2))(react@19.0.0)
+      '@payloadcms/live-preview-react':
+        specifier: ^3.13.0
+        version: 3.13.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@payloadcms/next':
         specifier: ^3.13.0
         version: 3.13.0(@types/react@19.0.0)(graphql@16.10.0)(monaco-editor@0.52.2)(next@15.0.4-canary.45(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.77.4))(payload@3.13.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.2))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.2)
@@ -38,6 +41,9 @@ importers:
       next:
         specifier: canary
         version: 15.0.4-canary.45(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.77.4)
+      only-make:
+        specifier: ^9.9.9
+        version: 9.9.9
       payload:
         specifier: ^3.13.0
         version: 3.13.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.2)
@@ -1178,6 +1184,15 @@ packages:
     peerDependencies:
       graphql: ^16.8.1
       payload: 3.13.0
+
+  '@payloadcms/live-preview-react@3.13.0':
+    resolution: {integrity: sha512-W6MT+iyNDBo7ZBw2Vcunl9eBUhp+qJT/f8MjHrmNGPJT73+yNxeOTpVAcOx/6T3AAz8rWodcKmRC3jn3ZcwlgQ==}
+    peerDependencies:
+      react: ^19.0.0 || ^19.0.0-rc-65a56d0e-20241020
+      react-dom: ^19.0.0 || ^19.0.0-rc-65a56d0e-20241020
+
+  '@payloadcms/live-preview@3.13.0':
+    resolution: {integrity: sha512-euEIpyqisi4GWy9inYxaKe6aV3Lrfxhl4rqxLR5rwL91jRLcJh/pvhEviO9chi431W8HAAKYRQjWPkVcoYT9TA==}
 
   '@payloadcms/next@3.13.0':
     resolution: {integrity: sha512-1IzMlsoTzuuKpJdLvmlT9cgUwxAgilrjHcA/ZL2PVYVtpSD7Yonog2L6rhBaJhStkmjiqOHnK7gy/rziVjIgVQ==}
@@ -2920,6 +2935,9 @@ packages:
 
   once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
+
+  only-make@9.9.9:
+    resolution: {integrity: sha512-BRjY1JcQpc39xQMniXhxS1xLT4iC3vpPgNYtJDKBWuREedVg2x7Ti80oZB1YbVWB5ZgzxdKj26s9YPaADcPJ2g==}
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -4961,6 +4979,14 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
+  '@payloadcms/live-preview-react@3.13.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@payloadcms/live-preview': 3.13.0
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
+  '@payloadcms/live-preview@3.13.0': {}
+
   '@payloadcms/next@3.13.0(@types/react@19.0.0)(graphql@16.10.0)(monaco-editor@0.52.2)(next@15.0.4-canary.45(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.77.4))(payload@3.13.0(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.2))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.2)':
     dependencies:
       '@dnd-kit/core': 6.0.8(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -6993,6 +7019,8 @@ snapshots:
   once@1.4.0:
     dependencies:
       wrappy: 1.0.2
+
+  only-make@9.9.9: {}
 
   optionator@0.9.4:
     dependencies:

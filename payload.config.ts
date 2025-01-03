@@ -8,6 +8,7 @@ import {
   payloadSecret,
 } from "@/libs/config/server"
 import { Locale, defaultLocale } from "@/libs/locale"
+import { collections } from "@/libs/payload"
 import { postgresAdapter } from "@payloadcms/db-postgres"
 import { lexicalEditor } from "@payloadcms/richtext-lexical"
 import { buildConfig } from "payload"
@@ -16,7 +17,7 @@ import sharp from "sharp"
 export default buildConfig({
   serverURL: payloadUrl,
   editor: lexicalEditor(),
-  collections: [],
+  collections,
   secret: payloadSecret,
   localization: {
     locales: [Locale.En, Locale.Id],
