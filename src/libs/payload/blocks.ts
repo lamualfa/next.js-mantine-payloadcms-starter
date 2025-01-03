@@ -28,7 +28,7 @@ export const SectionTitleBlock: Block = {
     },
     {
       name: "subtitle",
-      label: "subtitle",
+      label: "Subtitle",
       type: "text",
       required: false,
       localized: true,
