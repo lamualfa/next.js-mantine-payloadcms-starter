@@ -2,12 +2,12 @@ pre-commit:
   piped: true
   commands:
     format:
-      run: qlty fmt
+      run: qlty fmt {staged_files}
       stage_fixed: true
     check:
-      run: qlty check --no-upgrade-check
+      run: qlty check --no-upgrade-check {staged_files}
     smells:
-      run: qlty smells
+      run: qlty smells {staged_files}
 commit-msg:
   commands:
     lint:
